@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/editorFragment"
+        android:name="com.example.caapplication.EditorFragment"
+        android:label="editor_fragment"
+        tools:layout="@layout/editor_fragment" >
+        <argument
+            android:name="cocktail"
+            app:argType="com.example.caapplication.data.CocktailEntity" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.caapplication.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_editorFragment"
+            app:destination="@id/editorFragment" />
+    </fragment>
+
+<!--    <fragment-->
+<!--        android:id="@+id/SecondFragment"-->
+<!--        android:name="com.example.caapplication.SecondFragment"-->
+<!--        android:label="@string/second_fragment_label"-->
+<!--        tools:layout="@layout/fragment_second">-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_SecondFragment_to_FirstFragment"-->
+<!--            app:destination="@id/FirstFragment" />-->
+<!--    </fragment>-->
+
+
+
+
+
+
+
+<!--    app:startDestination="@id/FirstFragment">-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/FirstFragment"-->
+<!--        android:name="com.example.caapplication.MainFragment"-->
+<!--        android:label="@string/first_fragment_label"-->
+<!--        tools:layout="@layout/fragment_main">-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_FirstFragment_to_SecondFragment"-->
+<!--            app:destination="@id/SecondFragment" />-->
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/SecondFragment"-->
+<!--        android:name="com.example.caapplication.SecondFragment"-->
+<!--        android:label="@string/second_fragment_label"-->
+<!--        tools:layout="@layout/fragment_second">-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_SecondFragment_to_FirstFragment"-->
+<!--            app:destination="@id/FirstFragment" />-->
+<!--    </fragment>-->
+
+
+
+
+
+
+<!--    app:startDestination="@id/mainFragment">-->
+<!--    <fragment-->
+<!--        android:id="@+id/editorFragment"-->
+<!--        android:name="com.example.caapplication.EditorFragment"-->
+<!--        android:label="editor_fragment"-->
+<!--        tools:layout="@layout/editor_fragment" >-->
+<!--        <argument-->
+<!--            android:name="cocktailId"-->
+<!--            app:argType="integer"-->
+<!--            android:defaultValue="999" />-->
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/mainFragment"-->
+<!--        android:name="com.example.caapplication.MainFragment"-->
+<!--        android:label="MainFragment" >-->
+<!--        <action-->
+<!--            android:id="@+id/action_mainFragment_to_editorFragment"-->
+<!--            app:destination="@id/editorFragment" />-->
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/SecondFragment"-->
+<!--        android:name="com.example.caapplication.SecondFragment"-->
+<!--        android:label="@string/second_fragment_label"-->
+<!--        tools:layout="@layout/fragment_second">-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_SecondFragment_to_FirstFragment"-->
+<!--            app:destination="@id/FirstFragment" />-->
+<!--    </fragment>-->
+
+</navigation>

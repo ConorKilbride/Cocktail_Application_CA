@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditorFragment"
+    >
+
+    <TextView
+        android:id="@+id/titleHeading"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Title : "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="28dp"
+        android:hint="@string/enter_cocktail_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toEndOf="@+id/titleHeading"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill,MissingConstraints"
+        tools:text="Cocktail title in here" />
+
+    <ImageView
+        android:id="@+id/cocktailImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="100dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="Content Description"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        tools:ignore="HardcodedText"/>
+
+
+    <TextView
+        android:id="@+id/categoryHeading"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Category : "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="96dp"
+        android:hint="@string/enter_cocktail_category"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toEndOf="@+id/categoryHeading"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill,MissingConstraints"
+        tools:text="Cocktail category in here" />
+
+    <EditText
+        android:id="@+id/myNotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="208dp"
+        android:layout_marginEnd="30dp"
+        android:hint="Enter your comments in here"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/instruction" />
+
+    <TextView
+        android:id="@+id/instructionHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="348dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Instructions "
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleHeading" />
+
+    <TextView
+        android:id="@+id/instruction"
+        android:layout_width="174dp"
+        android:layout_height="200dp"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/enter_cocktail_instructions"
+        android:inputType="textCapSentences|textMultiLine"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionHeading"
+        tools:ignore="Autofill"
+        tools:text="Cocktail Instruction in here" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+

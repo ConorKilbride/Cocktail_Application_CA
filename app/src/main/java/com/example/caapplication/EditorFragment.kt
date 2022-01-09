@@ -76,7 +76,22 @@ class EditorFragment : Fragment() {
     }
 
     private fun saveAndReturn() :Boolean{
-        viewModel.saveFavourite(FavouriteEntity(args.cocktail.idDrink, binding.myNotes.text.toString()))
+
+//        binding.myNotes.text.toString()?.let {
+//            viewModel.saveFavourite(
+//                FavouriteEntity(
+//                    args.cocktail.idDrink,
+//                    binding.myNotes.text.toString()
+//                )
+//            )
+//        }
+
+        viewModel.saveFavourite(
+                FavouriteEntity(
+                    args.cocktail.idDrink,
+                    binding.myNotes.text.toString()
+                )
+            )
         findNavController().navigateUp()
         return true
     }
